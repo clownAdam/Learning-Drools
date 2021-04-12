@@ -1,0 +1,19 @@
+package cn.clown.drools
+
+import cn.clown.drools.Person
+rule "person1"
+    when
+        $p:Person(name=="zhangsan",age==30);
+    then
+        $p.setName("lisi");
+        update($p);
+        System.out.println("改完之后的名字"+$p.getName());
+    end
+
+rule "person2"
+    when
+        $p:Person(name=="lisi")
+    then
+        $p.setAge(40);
+        System.out.println("改完之后的名字"+$p.getName()+"改完之后的年龄"+$p.getAge());
+    end

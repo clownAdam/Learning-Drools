@@ -1,0 +1,7 @@
+package cn.clown.drools
+    rule "test01"
+        when
+
+        then
+            System.out.println("hello");
+    end
